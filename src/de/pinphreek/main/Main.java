@@ -1,6 +1,8 @@
 package de.pinphreek.main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import org.jibble.pircbot.IrcException;
 
@@ -9,6 +11,8 @@ import de.pinphreek.io.Load;
 
 public class Main {
 
+	public static Bot bot;
+	
 	public static void main(String[] args) {
 		
 		//TODO load Plugins
@@ -19,8 +23,11 @@ public class Main {
 			e.printStackTrace();
 			System.err.println("Error while reading config-file!");
 		}
-		Bot bot = new Bot();
+		
+		
+		bot = new Bot();
 		bot.setVerbose(false);
+		//connect to twitch
 		try {
 			bot.connect("irc.twitch.tv", 6667, Config.API_KEY);
 		} catch (IOException | IrcException e) {
@@ -29,11 +36,26 @@ public class Main {
 			System.exit(-1);
 		}
 		bot.joinChannel("#" + Config.streamer);
-		System.out.println("Debug");
+		System.out.println("Connected in channel " + Config.streamer + " as " + Config.name);
 		
 		//Say hello
-		bot.sendMessage("#" + bot.getName(), "Hello Chat!");
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		bot.sendMessage("#" + Config.streamer, "Hello Chat!");
 		
+		//start console input from bot
+		/*while (true) {
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			try {
+				bot.sendMessage(Config.streamer, reader.readLine());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+		}*/
 		//run plugins
 		
 		
