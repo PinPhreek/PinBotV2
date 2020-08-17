@@ -2,6 +2,7 @@ package de.pinphreek.plugin;
 
 public interface Plugin {
     public void run();
+
     public void stop();
 
     //sending and reciveing methods for twitch-chat

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import de.pinphreek.plugin.PluginManager;
 import org.jibble.pircbot.IrcException;
 
 import de.pinphreek.config.Config;
@@ -12,6 +13,7 @@ import de.pinphreek.io.Load;
 public class Main {
 
 	public static Bot bot;
+	public static PluginManager pluginManager = new PluginManager();
 	
 	public static void main(String[] args) {
 		
