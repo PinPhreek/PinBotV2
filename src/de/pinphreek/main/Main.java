@@ -47,7 +47,8 @@ public class Main {
 			e.printStackTrace();
 		}
 		bot.sendMessage("#" + Config.streamer, "The holy bot " + Config.name + " entered the chat of " + Config.streamer);
-		
+
+		/*
 		//start console input from bot
 		while (true) {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -57,7 +58,7 @@ public class Main {
 				e.printStackTrace();
 			}
 
-		}
+		}*/
 		//TODO run plugins
 		
 		

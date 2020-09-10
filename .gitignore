@@ -1,0 +1,6 @@
+out/
+classes/
+config.txt
+src/META-INF/
+*.iml
+pircbot.jar
