@@ -17,7 +17,8 @@ public class PluginLoader {
     }
     public static Class<?> loadClass(File dir, String config) throws IOException, ClassNotFoundException {
 
-        JarFile jf = new JarFile(dir);
+        @SuppressWarnings("resource")
+		JarFile jf = new JarFile(dir);
         JarEntry je = jf.getJarEntry(config);
 
         BufferedReader br = new BufferedReader(new InputStreamReader(jf.getInputStream(je)));

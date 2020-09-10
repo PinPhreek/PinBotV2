@@ -5,3 +5,4 @@ src/META-INF/
 *.iml
 pircbot.jar
 .idea/
+/bin/

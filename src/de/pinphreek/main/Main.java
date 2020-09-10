@@ -1,9 +1,6 @@
 package de.pinphreek.main;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-
 import de.pinphreek.plugin.PluginManager;
 import org.jibble.pircbot.IrcException;
 

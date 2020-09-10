@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="/PinBotV2/src"/>
-	<classpathentry kind="var" path="USER_HOME/Downloads/pircbot-1.5.0/pircbot.jar" sourcepath="/USER_HOME/Downloads/pircbot-1.5.0/pircbot.jar"/>
-	<classpathentry kind="output" path="/out/production/PinBotV2"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Workspace/PinBotV2/pircbot.jar"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>
