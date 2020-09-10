@@ -10,4 +10,6 @@ public class Config {
 	public static final String LABEL_NAME = "NAME";
 	public static final String LABEL_STREAMER = "STREAMER";
 	
+	public static String os = "Mac OS X";
+	
 }
