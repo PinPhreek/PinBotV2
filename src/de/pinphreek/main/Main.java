@@ -1,7 +1,11 @@
 package de.pinphreek.main;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import de.pinphreek.plugin.PluginManager;
+import de.pinphreek.users.User;
+
 import org.jibble.pircbot.IrcException;
 
 import de.pinphreek.config.Config;
@@ -11,11 +15,14 @@ public class Main {
 
 	public static Bot bot;
 	public static PluginManager pluginManager = new PluginManager();
+	public static ArrayList<User> users = new ArrayList<>();
 	
 	public static void main(String[] args) {
 		
 		//TODO load Plugins
 		//start twitchbot (reading a config)
+		Config.os = System.getProperty("os.name");
+		users = Load.loadAllUsers("users.txt");
 		try {
 			Load.readConfigFile();
 		} catch (IOException e) {
